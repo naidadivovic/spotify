@@ -1,16 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <section id="hero">
-        
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="#">
+            <img src="./assets/images/logo2.png" alt="Logo" />
+        </a>
+        <br /><br>
+
+        <a href="">
+            <div class="menu-icon">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </a>
+
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="fa fa-browse"></span>
+                        <span>Browse</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-radio"></span>
+                        <span>Radio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-library"></span>
+                        <span>Library</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-mix"></span>
+                        <span>Your daily mix</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-recently"></span>
+                        <span>Recently played</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-songs"></span>
+                        <span>Songs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-artists"></span>
+                        <span>Artists</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-albums"></span>
+                        <span>Albums</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-more"></span>
+                        <span>More...</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-playlists"></span>
+                        <span>Playlists</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-likedfromradio"></span>
+                        <span>Liked from radio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-radar"></span>
+                        <span>Release radar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-cmhb"></span>
+                        <span><em>#CatchMyHeadBanging</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-christmas"></span>
+                        <span><em>#Christmas</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-favorite"></span>
+                        <span>Favorite</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-ballads"></span>
+                        <span>Ballads</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-pop"></span>
+                        <span>Pop</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-spinme"></span>
+                        <span><em>#SpinMe</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-menuitem"></span>
+                        <span>Menu Item</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="main-container">
+            <div class="topbar">
+                <div class="prev-next-buttons">
+                    <!-- <button type="button" class="fa fas fa-chevron-left"></button>
+                <button type="button" class="fa fas fa-chevron-right"></button> -->
+                    <a href="" class="previous round">&#8249;</a>
+                    <a href="" class="next round">&#8250;</a>
+                </div>
+
+                <div class="wrapper">
+                    <a href="">
+                        <img class="search-icon"
+                            src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                    </a>
+                    <input class="search" placeholder="Search" type="text">
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="">Sign Up</a></li>
+                    </ul>
+                    <button type="button">Log In</button>
+                </div>
+            </div>
     </section>
-    
+
+    <section>
+        <div class="main">
+
+            <img src="./assets/images/hands-like-houses (1).jpg" alt="">
+            <div class="fade"></div>
+
+            <h1 class="artist">artist</h1>
+            <h1 class="hands-like-houses-heading">Hands Like Houses</h1>
+            <h5 class="monthly-listeners">418,986 monthly listeners</h5>
+            <a href="">
+                <button type="button" class="play">Play</button>
+            </a>
+            <a href="">
+                <button type="button" class="follow">Follow</button>
+            </a>
+            <a href="">
+                <span class="three-dots">&#8942;</span>
+            </a>
+            <div class="under-bar">
+                <a href="" class="about">
+                    <div>
+                        <p class="inline">Overview</p>
+                    </div>
+                    <div>
+                        <p class="inline">Related artists</p>
+                    </div>
+                    <div>
+                        <p class="inline">About</p>
+                    </div>
+                    <div>
+                        <p class="inline">Concerts</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h4 class="popular-heading">Popular</h4>
+        <div class="popular">
+            <img src="./assets/images/dissonants.jpg" alt="">
+            <p class="number">1</p>
+            <a href="">
+                <p class="song-name">Colourblind</p>
+            </a>
+            <p class="views">1,812,421</p>
+        </div>
+        <div class="popular2">
+            <img src="./assets/images/unimagine.jpg" alt="">
+            <p class="number2">2</p>
+            <a href="">
+                <p class="song-name2">No Parallels</p>
+            </a>
+            <p class="views2">1,812,421</p>
+        </div>
+        <div class="popular3">
+            <img src="./assets/images/dissonants.jpg" alt="">
+            <p class="number3">3</p>
+            <a href="">
+                <p class="song-name3">Division Symbols</p>
+            </a>
+            <p class="views3">1,812,421</p>
+        </div>
+        <div class="popular4">
+            <img src="./assets/images/dissonants.jpg" alt="">
+            <p class="number4">4</p>
+            <a href="">
+                <p class="song-name4">I Am</p>
+            </a>
+            <p class="views4">1,812,421</p>
+        </div>
+        <a href="" class="show">Show 5 More</a>
+    </section>
+
+    <section>
+        <h4 class="related-artists-heading">Related Artists</h4>
+        <div class="related-artists">
+            <div class="issues">
+                <img src="./assets/images/issues.jpg" alt="">
+                <p>Issues</p>
+            </div>
+            <div class="dream-on-dreamer">
+                <img src="./assets/images/dream-on-dreamer.jpg" alt="">
+                <p>Dream on Dreamer</p>
+            </div>
+            <div class="isles">
+                <img src="./assets/images/isles&glaciers.jpg" alt="">
+                <p>Isles & Glaciers</p>
+            </div>
+            <div class="jamies">
+                <img src="./assets/images/Jamies-Elsewhere.jpg" alt="">
+                <p>Jamie's Elsewhere</p>
+            </div>
+            <div class="secrets">
+                <img src="./assets/images/secrets.jpg" alt="">
+                <p>Secrets</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h4 class="albums-heading">Albums</h4>
+        <img class="dissonants-m" src="./assets/images/dissonants.jpg" alt="">
+        <div class="album-info">
+            <p>2016</p>
+            <h4>Dissonants</h4>
+            <a href="" class="save">Save</a>
+            <a href="">
+                <span class="three-dots2">&#8942;</span>
+            </a>
+        </div>
+        <a class="more-albums" href="">More Albums</a>
+    </section>
 </body>
+
 </html>
